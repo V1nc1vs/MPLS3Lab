@@ -1,4 +1,5 @@
 import ConnectHandler
+import ShowInterfaceBrief
 import os
 import pathlib
 
@@ -19,6 +20,8 @@ def __main__():
             password = line.split(',')[3].strip()
 
         handlers.append(ConnectHandler.connect_to_device(device_type,ip,username,password))
+
+        ShowInterfaceBrief.Show_interface_config(handlers)
 
 
 
