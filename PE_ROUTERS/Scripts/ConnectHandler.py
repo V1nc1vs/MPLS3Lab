@@ -2,9 +2,6 @@ from netmiko import ConnectHandler
 from netmiko import NetmikoTimeoutException, NetmikoAuthenticationException
 
 
-PATH="../CREDENTIALS/mpl3_l3vpn_credentials.txt"
-ARGS="../SSH_ARGS/mpls3_vpn_credentials.txt"
-
 
 def connect_to_device(device_type,ip,username,password):
 
@@ -32,4 +29,5 @@ def connect_to_device(device_type,ip,username,password):
         print(f"ERROR: unexpected error occured while connecting to device {device['ip']}: {e}\n\n")
 
 
+    return net_connect
 
